@@ -11,8 +11,8 @@ jobs:
 
       - name: Apply web compatibility patches
         run: |
-          curl -sL -o /tmp/web_patch.tar.gz "https://raw.githubusercontent.com/free-zuike/streak/main/web_patch.zip"
-          unzip -o /tmp/web_patch.zip -d .
+          curl -sL -o /tmp/web_patch.tar.gz "https://raw.githubusercontent.com/free-zuike/streak/main/web_patch.tar.gz"
+          tar -xzf /tmp/web_patch.tar.gz
           cp -r web_patch/lib/* lib/
 
       - uses: subosito/flutter-action@v2
